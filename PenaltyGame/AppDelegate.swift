@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  PenaltyGame
+//  penaltyGameProject
 //
-//  Created by 반지윤 on 2020/11/19.
+//  Created by 반지윤 on 2020/11/20.
 //
 
 import UIKit

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yvQ-cx-R8c">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,26 +11,120 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PenaltyGame" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="penaltyGameProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="지윤" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afi-O4-wlS">
-                                <rect key="frame" x="186" y="313" width="30" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Taf-LE-ef6">
+                                <rect key="frame" x="175" y="335.33333333333331" width="40" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="6XY-Pi-eKI">
+                                <rect key="frame" x="148" y="406" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepperValueChangedWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="xbL-Nw-ZZV"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmf-kA-tin">
+                                <rect key="frame" x="180" y="528" width="30" height="30"/>
+                                <state key="normal" title="완료"/>
+                                <connections>
+                                    <segue destination="Hwn-6F-230" kind="show" id="lQ8-AM-pvW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전체 인원 수를 선택하세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oW-15-5RM">
+                                <rect key="frame" x="87.999999999999986" y="137" width="214.66666666666663" height="25.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6XY-Pi-eKI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="148" id="1jZ-tL-gP6"/>
+                            <constraint firstItem="cmf-kA-tin" firstAttribute="top" secondItem="6XY-Pi-eKI" secondAttribute="bottom" constant="90" id="5st-CH-VSY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7oW-15-5RM" secondAttribute="trailing" constant="87.333333333333371" id="FCa-Zc-lVg"/>
+                            <constraint firstItem="cmf-kA-tin" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="180" id="JLs-bK-Gx3"/>
+                            <constraint firstItem="7oW-15-5RM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="OTq-bF-aDB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Taf-LE-ef6" secondAttribute="trailing" constant="175" id="Qcp-Qg-zUy"/>
+                            <constraint firstItem="7oW-15-5RM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88" id="QeA-6e-bH8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cmf-kA-tin" secondAttribute="bottom" constant="252" id="Tvn-UR-7Ps"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6XY-Pi-eKI" secondAttribute="trailing" constant="148" id="Z9z-yS-iFW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cmf-kA-tin" secondAttribute="trailing" constant="180" id="a3v-gM-SWm"/>
+                            <constraint firstItem="Taf-LE-ef6" firstAttribute="top" secondItem="7oW-15-5RM" secondAttribute="bottom" constant="172.99999999999997" id="mmf-vW-tTz"/>
+                            <constraint firstItem="6XY-Pi-eKI" firstAttribute="top" secondItem="Taf-LE-ef6" secondAttribute="bottom" constant="50.333333333333371" id="sSF-FF-q5l"/>
+                            <constraint firstItem="Taf-LE-ef6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="175" id="vgE-T3-CrI"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wJM-Zm-Rql"/>
+                    <connections>
+                        <outlet property="peopleCount" destination="Taf-LE-ef6" id="6VS-hc-n6X"/>
+                        <outlet property="stepper" destination="6XY-Pi-eKI" id="w2u-N4-uc0"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="74"/>
+            <point key="canvasLocation" x="1064.6153846153845" y="77.488151658767762"/>
+        </scene>
+        <!-- 참여자의 이름을 입력하세요-->
+        <scene sceneID="kFb-EA-2dR">
+            <objects>
+                <viewController id="Hwn-6F-230" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ops-gq-LGU">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Y2-EJ-Gj2">
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="M9d-7u-xlk">
+                                        <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M9d-7u-xlk" id="zf0-nF-ZNV">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="n2i-Wk-KYG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3Y2-EJ-Gj2" firstAttribute="top" secondItem="n2i-Wk-KYG" secondAttribute="top" id="FIS-rs-0hk"/>
+                            <constraint firstItem="n2i-Wk-KYG" firstAttribute="bottom" secondItem="3Y2-EJ-Gj2" secondAttribute="bottom" id="jsr-FN-niZ"/>
+                            <constraint firstItem="3Y2-EJ-Gj2" firstAttribute="leading" secondItem="n2i-Wk-KYG" secondAttribute="leading" id="nAK-Gn-o3n"/>
+                            <constraint firstItem="n2i-Wk-KYG" firstAttribute="trailing" secondItem="3Y2-EJ-Gj2" secondAttribute="trailing" id="q6r-q1-ARL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title=" 참여자의 이름을 입력하세요" id="LK3-4v-D1O"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2f2-qk-PgP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2067.6923076923076" y="76.777251184834114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="49B-vB-pVC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yvQ-cx-R8c" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jHe-tD-UFh">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Hhf-hV-Ikk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O7M-8Z-ipB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.38461538461539" y="77.488151658767762"/>
         </scene>
     </scenes>
     <resources>
