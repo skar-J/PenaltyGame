@@ -56,6 +56,7 @@ class ViewController: UIViewController {
         self.view.addSubview(self.isMember)
         
         
+        // 다음 페이지로 넘어갈 버튼을 구현했습니다.
         self.nextPage.frame.size = CGSize(width: viewWidth * 2 / 3,
                                         height: 60)
         self.nextPage.center.x = CGFloat(viewWidth / 2)
