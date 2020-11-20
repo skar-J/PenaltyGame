@@ -1,24 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GoK-1f-M2c">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="saJ-5k-IyO">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="b4w-WI-peR" customClass="ViewController" customModule="PenaltyGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AEa-ZL-pfN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전체 인원 수를 입력하세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEY-S9-B6v">
+                                <rect key="frame" x="84.5" y="333.5" width="245" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="h08-Y2-NUA">
+                                <rect key="frame" x="160" y="482" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepperValueChangedWithSender:" destination="b4w-WI-peR" eventType="valueChanged" id="6mF-0a-1vk"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXS-rc-BHZ">
+                                <rect key="frame" x="186" y="677.5" width="42" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <action selector="Click_nextBtn:" destination="b4w-WI-peR" eventType="touchUpInside" id="XPw-KY-oGa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bo6-6Y-FcH">
+                                <rect key="frame" x="183.5" y="581" width="47" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="초기화"/>
+                                <connections>
+                                    <action selector="Click_resetBtn:" destination="b4w-WI-peR" eventType="touchUpInside" id="0F7-Ly-we3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALd-2d-Yx7">
+                                <rect key="frame" x="202" y="437.5" width="10.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1oG-NX-nho"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iXS-rc-BHZ" firstAttribute="centerX" secondItem="AEa-ZL-pfN" secondAttribute="centerX" id="F8G-zz-B4d"/>
+                            <constraint firstItem="mEY-S9-B6v" firstAttribute="centerX" secondItem="AEa-ZL-pfN" secondAttribute="centerX" id="Qke-Vh-i4i"/>
+                            <constraint firstItem="h08-Y2-NUA" firstAttribute="centerX" secondItem="AEa-ZL-pfN" secondAttribute="centerX" id="SLH-Nb-Fpu"/>
+                            <constraint firstItem="ALd-2d-Yx7" firstAttribute="centerX" secondItem="AEa-ZL-pfN" secondAttribute="centerX" id="XYR-sA-bqy"/>
+                            <constraint firstItem="ALd-2d-Yx7" firstAttribute="centerY" secondItem="AEa-ZL-pfN" secondAttribute="centerY" id="Zae-O7-0Tu"/>
+                            <constraint firstItem="Bo6-6Y-FcH" firstAttribute="centerY" secondItem="AEa-ZL-pfN" secondAttribute="centerY" constant="150" id="ba2-av-0H9"/>
+                            <constraint firstItem="iXS-rc-BHZ" firstAttribute="centerY" secondItem="AEa-ZL-pfN" secondAttribute="centerY" constant="250" id="gqy-PE-ChF"/>
+                            <constraint firstItem="mEY-S9-B6v" firstAttribute="centerY" secondItem="AEa-ZL-pfN" secondAttribute="centerY" constant="-100" id="qvQ-DT-4Pa"/>
+                            <constraint firstItem="h08-Y2-NUA" firstAttribute="centerY" secondItem="AEa-ZL-pfN" secondAttribute="centerY" constant="50" id="qxa-gE-g8c"/>
+                            <constraint firstItem="Bo6-6Y-FcH" firstAttribute="centerX" secondItem="AEa-ZL-pfN" secondAttribute="centerX" id="zuV-aA-4Pg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="MFB-jM-ZaH"/>
+                    <connections>
+                        <outlet property="peopleCount" destination="h08-Y2-NUA" id="6lu-Q1-4Go"/>
+                        <outlet property="resultValue" destination="ALd-2d-Yx7" id="Hnb-5o-aef"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZjV-7n-bv6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7" y="-15"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mfc-ah-94D">
+            <objects>
+                <navigationController id="GoK-1f-M2c" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DmB-3W-bdz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="b4w-WI-peR" kind="relationship" relationship="rootViewController" id="pOC-ge-Zmw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cRD-b9-ufn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-775" y="-15"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="bcm-bj-rkJ">
+            <objects>
+                <viewController storyboardIdentifier="TableViewController" id="FDi-aV-2UD" customClass="TableViewController" customModule="PenaltyGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xIL-Ge-TST">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ayQ-eA-nTj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="usx-XD-Tvn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="836" y="-15"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
