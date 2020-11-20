@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 //ㅇㅇ
+//이거 보이시나요
     
     @IBOutlet weak var peopleCount: UILabel!
     @IBOutlet weak var stepper: UIStepper!
