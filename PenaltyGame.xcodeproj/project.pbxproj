@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F544F56256B4AB70033C6E1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F544F55256B4AB70033C6E1 /* TableViewController.swift */; };
-		1F544F59256B4FD60033C6E1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F544F58256B4FD60033C6E1 /* TableViewCell.swift */; };
+		1F544F56256B4AB70033C6E1 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F544F55256B4AB70033C6E1 /* ListViewController.swift */; };
+		1F544F59256B4FD60033C6E1 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F544F58256B4FD60033C6E1 /* ListViewCell.swift */; };
 		1FB61E0F256669EC00847DA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB61E0E256669EC00847DA4 /* AppDelegate.swift */; };
 		1FB61E11256669EC00847DA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB61E10256669EC00847DA4 /* SceneDelegate.swift */; };
 		1FB61E13256669EC00847DA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB61E12256669EC00847DA4 /* ViewController.swift */; };
@@ -18,8 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F544F55256B4AB70033C6E1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		1F544F58256B4FD60033C6E1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		1F544F55256B4AB70033C6E1 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		1F544F58256B4FD60033C6E1 /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
 		1FB61E0B256669EC00847DA4 /* PenaltyGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PenaltyGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB61E0E256669EC00847DA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FB61E10256669EC00847DA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +41,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F544F5D256BA7980033C6E1 /* Supportings */ = {
+			isa = PBXGroup;
+			children = (
+				1FB61E1C256669ED00847DA4 /* Info.plist */,
+			);
+			path = Supportings;
+			sourceTree = "<group>";
+		};
+		1F544F60256BA7F40033C6E1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1FB61E0E256669EC00847DA4 /* AppDelegate.swift */,
+				1FB61E10256669EC00847DA4 /* SceneDelegate.swift */,
+				1FB61E12256669EC00847DA4 /* ViewController.swift */,
+				1F544F55256B4AB70033C6E1 /* ListViewController.swift */,
+				1F544F58256B4FD60033C6E1 /* ListViewCell.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1F544F62256BA8240033C6E1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1F544F64256BA8500033C6E1 /* New Group */,
+				1FB61E17256669ED00847DA4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1F544F64256BA8500033C6E1 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				1FB61E14256669EC00847DA4 /* Main.storyboard */,
+				1FB61E19256669ED00847DA4 /* LaunchScreen.storyboard */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		1FB61E02256669EC00847DA4 = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +98,9 @@
 		1FB61E0D256669EC00847DA4 /* PenaltyGame */ = {
 			isa = PBXGroup;
 			children = (
-				1FB61E0E256669EC00847DA4 /* AppDelegate.swift */,
-				1FB61E10256669EC00847DA4 /* SceneDelegate.swift */,
-				1FB61E12256669EC00847DA4 /* ViewController.swift */,
-				1FB61E14256669EC00847DA4 /* Main.storyboard */,
-				1FB61E17256669ED00847DA4 /* Assets.xcassets */,
-				1FB61E19256669ED00847DA4 /* LaunchScreen.storyboard */,
-				1FB61E1C256669ED00847DA4 /* Info.plist */,
-				1F544F55256B4AB70033C6E1 /* TableViewController.swift */,
-				1F544F58256B4FD60033C6E1 /* TableViewCell.swift */,
+				1F544F60256BA7F40033C6E1 /* Sources */,
+				1F544F62256BA8240033C6E1 /* Resources */,
+				1F544F5D256BA7980033C6E1 /* Supportings */,
 			);
 			path = PenaltyGame;
 			sourceTree = "<group>";
@@ -143,11 +175,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F544F59256B4FD60033C6E1 /* TableViewCell.swift in Sources */,
+				1F544F59256B4FD60033C6E1 /* ListViewCell.swift in Sources */,
 				1FB61E13256669EC00847DA4 /* ViewController.swift in Sources */,
 				1FB61E0F256669EC00847DA4 /* AppDelegate.swift in Sources */,
 				1FB61E11256669EC00847DA4 /* SceneDelegate.swift in Sources */,
-				1F544F56256B4AB70033C6E1 /* TableViewController.swift in Sources */,
+				1F544F56256B4AB70033C6E1 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +328,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W483T5Y4MX;
-				INFOPLIST_FILE = PenaltyGame/Info.plist;
+				INFOPLIST_FILE = PenaltyGame/Supportings/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +347,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W483T5Y4MX;
-				INFOPLIST_FILE = PenaltyGame/Info.plist;
+				INFOPLIST_FILE = PenaltyGame/Supportings/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

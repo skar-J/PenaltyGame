@@ -7,15 +7,26 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
-    let testArr = ["A", "B", "C", "D", "E"]
+class ListViewController: UIViewController, UITableViewDataSource {
+    let arr = ["Name1", "Name2", "Name3", "Name4", "Name5"]
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arr.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell",  for: indexPath)
+        cell.textLabel?.text = arr[indexPath.row]
+        return cell
+    }
+    
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // 네비게이션바 숨김 해제
         self.navigationController?.isNavigationBarHidden = false
 
-        tableView.delegate = self
         tableView.dataSource = self
 
         // Uncomment the following line to preserve selection between presentations
@@ -27,15 +38,15 @@ class TableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return testArr.count
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1
+//    }
+//
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return 0
+//    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

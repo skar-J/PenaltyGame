@@ -92,16 +92,16 @@
             </objects>
             <point key="canvasLocation" x="-775" y="-15"/>
         </scene>
-        <!--Table View Controller-->
+        <!--List View Controller-->
         <scene sceneID="x5i-47-U7C">
             <objects>
-                <tableViewController storyboardIdentifier="TableViewController" id="UP6-RJ-WWZ" customClass="TableViewController" customModule="PenaltyGame" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TableViewController" id="UP6-RJ-WWZ" customClass="ListViewController" customModule="PenaltyGame" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mn1-GX-Cgg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="hFm-My-zWe" customClass="TableViewCell" customModule="PenaltyGame" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" rowHeight="80" id="hFm-My-zWe" customClass="ListViewCell" customModule="PenaltyGame" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hFm-My-zWe" id="fcd-lc-EkN">
@@ -115,6 +115,9 @@
                             <outlet property="delegate" destination="UP6-RJ-WWZ" id="inV-YK-Wrj"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="mn1-GX-Cgg" id="c7i-Y4-fOd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLN-Kp-svr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
