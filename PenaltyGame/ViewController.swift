@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     @IBAction func Click_nextBtn(_ sender: Any) {
         // 이동하려는 View가 있는지 확인한다.
         if let controller = self.storyboard?.instantiateViewController(withIdentifier: "TableViewController") {
+            
             // 찾게 된다면 이동할 View로 Push 한다.
             self.navigationController?.pushViewController(controller, animated: true)
         }
@@ -34,9 +35,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         peopleCount.wraps = false
         peopleCount.autorepeat = true
         peopleCount.maximumValue = 10
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // 네비게이션바 숨김
+        self.navigationController?.isNavigationBarHidden = true
     }
 }
