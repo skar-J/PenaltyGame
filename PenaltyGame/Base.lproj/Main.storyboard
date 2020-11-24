@@ -11,8 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="penaltyGameProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PenaltyGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,7 +32,7 @@
                                 <rect key="frame" x="180" y="528" width="30" height="30"/>
                                 <state key="normal" title="완료"/>
                                 <connections>
-                                    <segue destination="Hwn-6F-230" kind="show" id="lQ8-AM-pvW"/>
+                                    <segue destination="Hwn-6F-230" kind="show" identifier="peopleCounting" id="lQ8-AM-pvW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전체 인원 수를 선택하세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oW-15-5RM">
@@ -67,13 +66,14 @@
                         <outlet property="stepper" destination="6XY-Pi-eKI" id="w2u-N4-uc0"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1064.6153846153845" y="77.488151658767762"/>
         </scene>
         <!-- 참여자의 이름을 입력하세요-->
         <scene sceneID="kFb-EA-2dR">
             <objects>
-                <viewController id="Hwn-6F-230" sceneMemberID="viewController">
+                <viewController id="Hwn-6F-230" customClass="PenaltyGameParticipantsViewController" customModule="PenaltyGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ops-gq-LGU">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,13 +82,31 @@
                                 <rect key="frame" x="0.0" y="88" width="390" height="722"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="M9d-7u-xlk">
-                                        <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="107" id="M9d-7u-xlk" customClass="ParticipantsListCell" customModule="PenaltyGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="390" height="107"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M9d-7u-xlk" id="zf0-nF-ZNV">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="107"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jfA-uR-9mW">
+                                                    <rect key="frame" x="20" y="25.666666666666671" width="200" height="56"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="NeJ-Ay-W3b"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="jfA-uR-9mW" secondAttribute="bottom" constant="25.5" id="Crg-YY-v9t"/>
+                                                <constraint firstItem="jfA-uR-9mW" firstAttribute="leading" secondItem="zf0-nF-ZNV" secondAttribute="leading" constant="20" id="GN5-CW-n91"/>
+                                                <constraint firstItem="jfA-uR-9mW" firstAttribute="top" secondItem="zf0-nF-ZNV" secondAttribute="top" constant="25.5" id="d1l-QL-hiA"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="participantsList" destination="jfA-uR-9mW" id="q1i-58-zpa"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -103,6 +121,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title=" 참여자의 이름을 입력하세요" id="LK3-4v-D1O"/>
+                    <connections>
+                        <outlet property="tableView" destination="3Y2-EJ-Gj2" id="xZi-M9-muK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2f2-qk-PgP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

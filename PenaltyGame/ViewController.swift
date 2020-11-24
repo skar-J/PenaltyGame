@@ -7,9 +7,13 @@
 
 import UIKit
 
+protocol SendDataDelegate {
+    func sendData(data: Int)
+}
+
 class ViewController: UIViewController {
-//ㅇㅇ
-//이거 보이시나요
+
+    var delegate: SendDataDelegate?
     
     @IBOutlet weak var peopleCount: UILabel!
     @IBOutlet weak var stepper: UIStepper!
@@ -28,6 +32,8 @@ class ViewController: UIViewController {
     @IBAction func stepperValueChanged(sender: UIStepper) {
         
         peopleCount.text = Int(sender.value).description
+        //delegate!.sendData(data: peopleCount.text)
+        delegate?.sendData(data: Int(peopleCount.text!) ?? 0)
     }
     
 }

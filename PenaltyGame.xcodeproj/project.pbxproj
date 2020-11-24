@@ -13,6 +13,7 @@
 		6C3AFEE32567516900D5D203 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3AFEE12567516900D5D203 /* Main.storyboard */; };
 		6C3AFEE52567516C00D5D203 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C3AFEE42567516C00D5D203 /* Assets.xcassets */; };
 		6C3AFEE82567516C00D5D203 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3AFEE62567516C00D5D203 /* LaunchScreen.storyboard */; };
+		6C587053256B480700545E6A /* PenaltyGameParticipantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C587052256B480700545E6A /* PenaltyGameParticipantsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6C3AFEE42567516C00D5D203 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C3AFEE72567516C00D5D203 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C3AFEE92567516C00D5D203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C587052256B480700545E6A /* PenaltyGameParticipantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenaltyGameParticipantsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				6C3AFEDB2567516900D5D203 /* AppDelegate.swift */,
 				6C3AFEDD2567516900D5D203 /* SceneDelegate.swift */,
 				6C3AFEDF2567516900D5D203 /* ViewController.swift */,
+				6C587052256B480700545E6A /* PenaltyGameParticipantsViewController.swift */,
 				6C3AFEE12567516900D5D203 /* Main.storyboard */,
 				6C3AFEE42567516C00D5D203 /* Assets.xcassets */,
 				6C3AFEE62567516C00D5D203 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				6C3AFEE02567516900D5D203 /* ViewController.swift in Sources */,
 				6C3AFEDC2567516900D5D203 /* AppDelegate.swift in Sources */,
+				6C587053256B480700545E6A /* PenaltyGameParticipantsViewController.swift in Sources */,
 				6C3AFEDE2567516900D5D203 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
