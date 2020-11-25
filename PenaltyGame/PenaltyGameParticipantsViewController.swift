@@ -7,24 +7,28 @@
 
 import UIKit
 
-class PenaltyGameParticipantsViewController: UIViewController, SendDataDelegate {
+protocol Getdelegate {
+    func get() -> Int
+}
+
+class PenaltyGameParticipantsViewController: UIViewController {
    
-    var p = 1
+    var delegate: Getdelegate!
+    var num = 1
     
-    func sendData(data: Int) {
-        p = data
-    }
+//    func sendData(data: Int) {
+//        p = data
+//    }
     
     @IBOutlet weak var tableView: UITableView!
-    
-    var data:[String] = ["1","2","4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
         tableView.dataSource = self
         
+        delegate = navigationController?.viewControllers[0] as! Getdelegate
+        num = delegate.get()
     }
 }
 
@@ -33,13 +37,15 @@ extension PenaltyGameParticipantsViewController: UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return p
+        return num
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? ParticipantsListCell else { return UITableViewCell() }
-        
+            // 타입캐스팅에 성공할수도있고 실패할수도 있다.
+            // tableView.dequeueReusableCell(withIdentifier: "cell") as? ParticipantsListCell 이거 실패하면 nil이다.
+            // tableView.dequeueReusableCell(withIdentifier: "cell") as? ParticipantsListCell 이 결과가 nil일수도있고 participantsListCell일수도있다.
         return cell
         
     }

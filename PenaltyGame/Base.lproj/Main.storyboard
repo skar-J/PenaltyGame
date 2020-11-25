@@ -70,7 +70,7 @@
             </objects>
             <point key="canvasLocation" x="1064.6153846153845" y="77.488151658767762"/>
         </scene>
-        <!-- 참여자의 이름을 입력하세요-->
+        <!--Penalty Game Participants View Controller-->
         <scene sceneID="kFb-EA-2dR">
             <objects>
                 <viewController id="Hwn-6F-230" customClass="PenaltyGameParticipantsViewController" customModule="PenaltyGame" customModuleProvider="target" sceneMemberID="viewController">
@@ -79,7 +79,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Y2-EJ-Gj2">
-                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
+                                <rect key="frame" x="0.0" y="169" width="390" height="566"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="107" id="M9d-7u-xlk" customClass="ParticipantsListCell" customModule="PenaltyGame" customModuleProvider="target">
@@ -110,17 +110,36 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNI-8S-Bvm">
+                                <rect key="frame" x="172" y="762" width="46" height="30"/>
+                                <state key="normal" title="섞기"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 참여자의 이름을 입력하세요" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLI-Ze-DKS">
+                                <rect key="frame" x="67" y="118.99999999999999" width="256" height="26.333333333333329"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="ukz-q5-FSZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n2i-Wk-KYG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="3Y2-EJ-Gj2" firstAttribute="top" secondItem="n2i-Wk-KYG" secondAttribute="top" id="FIS-rs-0hk"/>
-                            <constraint firstItem="n2i-Wk-KYG" firstAttribute="bottom" secondItem="3Y2-EJ-Gj2" secondAttribute="bottom" id="jsr-FN-niZ"/>
+                            <constraint firstItem="fNI-8S-Bvm" firstAttribute="leading" secondItem="n2i-Wk-KYG" secondAttribute="leading" constant="172" id="3uZ-LR-8gN"/>
+                            <constraint firstItem="3Y2-EJ-Gj2" firstAttribute="top" secondItem="dLI-Ze-DKS" secondAttribute="bottom" constant="23.670000000000002" id="KN9-vT-ucz"/>
+                            <constraint firstItem="dLI-Ze-DKS" firstAttribute="leading" secondItem="n2i-Wk-KYG" secondAttribute="leading" constant="67" id="LQt-HJ-G9n"/>
+                            <constraint firstItem="n2i-Wk-KYG" firstAttribute="bottom" secondItem="fNI-8S-Bvm" secondAttribute="bottom" constant="18" id="XBm-J3-eXv"/>
+                            <constraint firstItem="n2i-Wk-KYG" firstAttribute="trailing" secondItem="fNI-8S-Bvm" secondAttribute="trailing" constant="172" id="cbl-od-t7O"/>
+                            <constraint firstItem="dLI-Ze-DKS" firstAttribute="top" secondItem="n2i-Wk-KYG" secondAttribute="top" constant="31" id="kwg-yS-1Vd"/>
                             <constraint firstItem="3Y2-EJ-Gj2" firstAttribute="leading" secondItem="n2i-Wk-KYG" secondAttribute="leading" id="nAK-Gn-o3n"/>
                             <constraint firstItem="n2i-Wk-KYG" firstAttribute="trailing" secondItem="3Y2-EJ-Gj2" secondAttribute="trailing" id="q6r-q1-ARL"/>
+                            <constraint firstItem="n2i-Wk-KYG" firstAttribute="trailing" secondItem="dLI-Ze-DKS" secondAttribute="trailing" constant="67" id="r01-pV-CSB"/>
+                            <constraint firstItem="fNI-8S-Bvm" firstAttribute="top" secondItem="3Y2-EJ-Gj2" secondAttribute="bottom" constant="27" id="wZ2-fP-huu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title=" 참여자의 이름을 입력하세요" id="LK3-4v-D1O"/>
+                    <navigationItem key="navigationItem" id="LK3-4v-D1O"/>
                     <connections>
                         <outlet property="tableView" destination="3Y2-EJ-Gj2" id="xZi-M9-muK"/>
                     </connections>
