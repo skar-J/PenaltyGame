@@ -79,10 +79,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Y2-EJ-Gj2">
-                                <rect key="frame" x="0.0" y="169" width="390" height="566"/>
+                                <rect key="frame" x="0.0" y="168" width="390" height="567"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="107" id="M9d-7u-xlk" customClass="ParticipantsListCell" customModule="PenaltyGame" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="107" id="M9d-7u-xlk" customClass="ParticipantsListCell" customModule="PenaltyGame" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="390" height="107"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M9d-7u-xlk" id="zf0-nF-ZNV">
@@ -113,13 +113,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNI-8S-Bvm">
                                 <rect key="frame" x="172" y="762" width="46" height="30"/>
                                 <state key="normal" title="섞기"/>
+                                <connections>
+                                    <segue destination="fCu-eS-RKk" kind="show" id="2De-D4-9qi"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 참여자의 이름을 입력하세요" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLI-Ze-DKS">
-                                <rect key="frame" x="67" y="118.99999999999999" width="256" height="26.333333333333329"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 참여자의 이름을 입력하세요" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLI-Ze-DKS">
+                                <rect key="frame" x="67" y="118.99999999999999" width="256" height="25.333333333333329"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="256" id="ukz-q5-FSZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -147,6 +150,90 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2f2-qk-PgP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2067.6923076923076" y="76.777251184834114"/>
+        </scene>
+        <!--Count Down View Controller-->
+        <scene sceneID="Vmy-Kl-yqf">
+            <objects>
+                <viewController id="fCu-eS-RKk" customClass="CountDownViewController" customModule="PenaltyGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hg0-nc-awd">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="벌칙 수행자는 누가될까요?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PnD-Cp-aXp">
+                                <rect key="frame" x="75.666666666666686" y="275" width="239" height="25.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pp-6L-4Sw">
+                                <rect key="frame" x="141" y="358" width="108" height="119.66666666666669"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btL-WO-kBd">
+                                <rect key="frame" x="180" y="529" width="30" height="30"/>
+                                <state key="normal" title="확인"/>
+                                <connections>
+                                    <segue destination="ASm-XK-PqT" kind="show" id="9gC-R0-7DT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lIb-c8-FBo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lIb-c8-FBo" firstAttribute="bottom" secondItem="btL-WO-kBd" secondAttribute="bottom" constant="251" id="0Sz-St-FKi"/>
+                            <constraint firstItem="lIb-c8-FBo" firstAttribute="trailing" secondItem="3pp-6L-4Sw" secondAttribute="trailing" constant="141" id="0x8-ME-s2F"/>
+                            <constraint firstItem="3pp-6L-4Sw" firstAttribute="leading" secondItem="lIb-c8-FBo" secondAttribute="leading" constant="141" id="M2I-5H-zTq"/>
+                            <constraint firstItem="lIb-c8-FBo" firstAttribute="trailing" secondItem="btL-WO-kBd" secondAttribute="trailing" constant="180" id="Qnz-9A-eAC"/>
+                            <constraint firstItem="lIb-c8-FBo" firstAttribute="trailing" secondItem="PnD-Cp-aXp" secondAttribute="trailing" constant="75.5" id="T1U-KD-7GK"/>
+                            <constraint firstItem="btL-WO-kBd" firstAttribute="leading" secondItem="lIb-c8-FBo" secondAttribute="leading" constant="180" id="XNS-fT-iba"/>
+                            <constraint firstItem="3pp-6L-4Sw" firstAttribute="top" secondItem="PnD-Cp-aXp" secondAttribute="bottom" constant="57.670000000000002" id="YEE-YM-PXl"/>
+                            <constraint firstItem="PnD-Cp-aXp" firstAttribute="top" secondItem="lIb-c8-FBo" secondAttribute="top" constant="187" id="duA-IX-z6D"/>
+                            <constraint firstItem="btL-WO-kBd" firstAttribute="top" secondItem="3pp-6L-4Sw" secondAttribute="bottom" constant="51.329999999999998" id="f4U-M0-aU2"/>
+                            <constraint firstItem="PnD-Cp-aXp" firstAttribute="leading" secondItem="lIb-c8-FBo" secondAttribute="leading" constant="75.5" id="uhc-WC-IWu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xyR-yR-uLV"/>
+                    <connections>
+                        <outlet property="countDownLabel" destination="3pp-6L-4Sw" id="qch-nV-k5n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zKQ-wU-eHR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3076.9230769230767" y="76.777251184834114"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kXi-8x-2hs">
+            <objects>
+                <viewController id="ASm-XK-PqT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8nc-md-pFB">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="축하합니다! 당첨입니다🥳" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npn-1v-sef">
+                                <rect key="frame" x="85.666666666666515" y="274.99999999999989" width="219" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxa-mn-B6a">
+                                <rect key="frame" x="53" y="392" width="284" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kE9-si-Zrn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AiI-Zf-miE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k58-o8-KwU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3947.6923076923076" y="76.777251184834114"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="49B-vB-pVC">
