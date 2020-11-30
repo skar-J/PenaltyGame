@@ -196,6 +196,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="xyR-yR-uLV"/>
                     <connections>
+                        <outlet property="checkButton" destination="btL-WO-kBd" id="3EY-Ei-ciy"/>
                         <outlet property="countDownLabel" destination="3pp-6L-4Sw" id="qch-nV-k5n"/>
                     </connections>
                 </viewController>
