@@ -11,7 +11,7 @@ protocol Getdelegate {
     func get() -> Int
 }
 
-class PenaltyGameParticipantsViewController: UIViewController {
+class WriteDownViewController: UIViewController {
    
     var delegate: Getdelegate!
     var num = 1
@@ -32,7 +32,7 @@ class PenaltyGameParticipantsViewController: UIViewController {
     }
 }
 
-extension PenaltyGameParticipantsViewController: UITableViewDelegate, UITableViewDataSource {
+extension WriteDownViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

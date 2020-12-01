@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="1064.6153846153845" y="77.488151658767762"/>
         </scene>
-        <!--Penalty Game Participants View Controller-->
+        <!--Write Down View Controller-->
         <scene sceneID="kFb-EA-2dR">
             <objects>
-                <viewController id="Hwn-6F-230" customClass="PenaltyGameParticipantsViewController" customModule="PenaltyGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Hwn-6F-230" customClass="WriteDownViewController" customModule="PenaltyGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ops-gq-LGU">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -23,6 +23,9 @@ class CountDownViewController: UIViewController {
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         
         checkButton.isHidden = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+            self.checkButton.isHidden = false
+        }
         
     }
 
