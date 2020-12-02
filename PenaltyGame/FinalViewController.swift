@@ -9,6 +9,8 @@ import UIKit
 
 class FinalViewController: UIViewController {
 
+    @IBOutlet weak var finalLoser: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

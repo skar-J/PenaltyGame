@@ -67,11 +67,11 @@
 				6C3AFEDF2567516900D5D203 /* ViewController.swift */,
 				6C587052256B480700545E6A /* WriteDownViewController.swift */,
 				6CFC7C8C256F3C8200233178 /* CountDownViewController.swift */,
+				6C94DC05257626570012231D /* FinalViewController.swift */,
 				6C3AFEE12567516900D5D203 /* Main.storyboard */,
 				6C3AFEE42567516C00D5D203 /* Assets.xcassets */,
 				6C3AFEE62567516C00D5D203 /* LaunchScreen.storyboard */,
 				6C3AFEE92567516C00D5D203 /* Info.plist */,
-				6C94DC05257626570012231D /* FinalViewController.swift */,
 			);
 			path = PenaltyGame;
 			sourceTree = "<group>";

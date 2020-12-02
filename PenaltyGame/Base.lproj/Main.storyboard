@@ -105,7 +105,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="participantsList" destination="jfA-uR-9mW" id="q1i-58-zpa"/>
+                                            <outlet property="writeDownField" destination="jfA-uR-9mW" id="T5Y-h8-wZv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -114,6 +114,7 @@
                                 <rect key="frame" x="172" y="762" width="46" height="30"/>
                                 <state key="normal" title="섞기"/>
                                 <connections>
+                                    <action selector="mixButton:" destination="Hwn-6F-230" eventType="touchUpInside" id="u7j-le-qNn"/>
                                     <segue destination="fCu-eS-RKk" kind="show" id="2De-D4-9qi"/>
                                 </connections>
                             </button>
@@ -204,10 +205,10 @@
             </objects>
             <point key="canvasLocation" x="3076.9230769230767" y="76.777251184834114"/>
         </scene>
-        <!--View Controller-->
+        <!--Final View Controller-->
         <scene sceneID="kXi-8x-2hs">
             <objects>
-                <viewController id="ASm-XK-PqT" sceneMemberID="viewController">
+                <viewController id="ASm-XK-PqT" customClass="FinalViewController" customModule="PenaltyGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8nc-md-pFB">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,6 +232,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="AiI-Zf-miE"/>
+                    <connections>
+                        <outlet property="finalLoser" destination="Fxa-mn-B6a" id="aeI-bR-rbv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k58-o8-KwU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
