@@ -25,7 +25,7 @@ class WriteDownViewController: UIViewController {
     //    func sendData(data: Int) {
     //        p = data
     //    }
-    
+    //00
 
     @IBOutlet weak var tableView: UITableView!
     
