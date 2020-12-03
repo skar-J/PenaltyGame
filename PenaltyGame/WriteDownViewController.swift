@@ -16,9 +16,9 @@ class WriteDownViewController: UIViewController {
     var delegate: Getdelegate!
     var num = 1
     
-    let randomNumber: UInt32 = arc4random_uniform(10) + 1
+    let randomNumber: Int = Int(arc4random_uniform(10) + 1)
     
-   //var text:[String] = []
+    var text:String = ""
     
     
     
@@ -30,10 +30,19 @@ class WriteDownViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func mixButton(_ sender: Any) {
-        tableView.cellForRow(at: IndexPath)
         
-        let text = cell.writeDownField.text
-      print(text)
+        guard let cell = tableView.cellForRow(at: IndexPath(row: randomNumber, section: 0)) as? ParticipantsListCell else { return }
+        
+         text = cell.writeDownField.text!
+         print(text)
+        
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? ParticipantsListCell else { return }
+//
+//        let text = cell.writeDownField.text
+//
+//        print(text)
+
+        
     }
     
     
@@ -62,6 +71,9 @@ extension WriteDownViewController: UITableViewDelegate, UITableViewDataSource {
         // 타입캐스팅에 성공할수도있고 실패할수도 있다.
         // tableView.dequeueReusableCell(withIdentifier: "cell") as? ParticipantsListCell 이거 실패하면 nil이다.
         // tableView.dequeueReusableCell(withIdentifier: "cell") as? ParticipantsListCell 이 결과가 nil일수도있고 participantsListCell일수도있다.
+        
+        
+        
         return cell
         
     }
