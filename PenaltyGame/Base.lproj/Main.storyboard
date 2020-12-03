@@ -208,7 +208,7 @@
         <!--Final View Controller-->
         <scene sceneID="kXi-8x-2hs">
             <objects>
-                <viewController id="ASm-XK-PqT" customClass="FinalViewController" customModule="PenaltyGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FinalViewController" id="ASm-XK-PqT" customClass="FinalViewController" customModule="PenaltyGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8nc-md-pFB">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

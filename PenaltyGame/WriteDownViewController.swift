@@ -16,11 +16,9 @@ class WriteDownViewController: UIViewController {
     var delegate: Getdelegate!
     var num = 1
     
-let randomNumber: Int = Int(arc4random_uniform(10) + 2)//2~10
+//var randomNumber: Int = Int(arc4random_uniform(10) + 1)//2~10
     
     var text:String = ""
-    
-    
     
     //    func sendData(data: Int) {
     //        p = data
@@ -33,15 +31,21 @@ let randomNumber: Int = Int(arc4random_uniform(10) + 2)//2~10
         
         //테이블뷰에서 셀의 갯수를 가져올 수 있다. -> 만약에 5개면 5개를 가지고 랜덤수를 생성하고  -> 랜덤으로 만든 인덱스를 가지고 셀을 다시 뽑아야한다 -> 그 셀에서 텍스트를 가져와서 프린트를 하든지 다음에 넘겨주던지
         
+        //난수
        
+        var randomNumber: Int = Int(arc4random_uniform(UInt32(tableView.numberOfRows(inSection: 0))))
         
         guard let cell = tableView.cellForRow(at: IndexPath(row: randomNumber, section: 0)) as? ParticipantsListCell else { return }
        
-        if tableView.numberOfRows(inSection: randomNumber) != 0 {
-            
-        }
+        //tableView.numberOfRows(inSection: 0) == 5
+           //셀이 한개 생성되면 난수가 1개 생성되고
+           //셀이 4개 생성되면 난수가 4개 생성되고
         
+        print(cell.writeDownField.text)
         
+        guard let FinalVC = self.storyboard?.instantiateViewController(identifier: "FinalViewController") as? FinalViewController else {return}
+        
+        FinalVC.finalLoser = cell.writeDownField.text
 //        if cell.writeDownField.count >= 2 {
 //            randomNumber <= cell.writeDownField.count
 //        }
