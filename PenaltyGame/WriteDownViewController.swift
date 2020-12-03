@@ -16,7 +16,7 @@ class WriteDownViewController: UIViewController {
     var delegate: Getdelegate!
     var num = 1
     
-    let randomNumber: Int = Int(arc4random_uniform(10) + 1)
+let randomNumber: Int = Int(arc4random_uniform(10) + 2)//2~10
     
     var text:String = ""
     
@@ -31,10 +31,27 @@ class WriteDownViewController: UIViewController {
     
     @IBAction func mixButton(_ sender: Any) {
         
-        guard let cell = tableView.cellForRow(at: IndexPath(row: randomNumber, section: 0)) as? ParticipantsListCell else { return }
+        //테이블뷰에서 셀의 갯수를 가져올 수 있다. -> 만약에 5개면 5개를 가지고 랜덤수를 생성하고  -> 랜덤으로 만든 인덱스를 가지고 셀을 다시 뽑아야한다 -> 그 셀에서 텍스트를 가져와서 프린트를 하든지 다음에 넘겨주던지
         
-         text = cell.writeDownField.text!
-         print(text)
+       
+        
+        guard let cell = tableView.cellForRow(at: IndexPath(row: randomNumber, section: 0)) as? ParticipantsListCell else { return }
+       
+        if tableView.numberOfRows(inSection: randomNumber) != 0 {
+            
+        }
+        
+        
+//        if cell.writeDownField.count >= 2 {
+//            randomNumber <= cell.writeDownField.count
+//        }
+
+//        if String(cell.writeDownField.text!).count >= 2 {
+//            randomNumber <= 2
+//        }
+
+//         text = cell.writeDownField.text!
+//         print(text)
         
 //        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? ParticipantsListCell else { return }
 //
@@ -42,10 +59,8 @@ class WriteDownViewController: UIViewController {
 //
 //        print(text)
 
-        
     }
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,7 +68,6 @@ class WriteDownViewController: UIViewController {
         
         delegate = navigationController?.viewControllers[0] as! Getdelegate
         num = delegate.get()
-        
         
     }
 }
