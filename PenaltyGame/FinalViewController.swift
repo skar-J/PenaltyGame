@@ -11,10 +11,12 @@ class FinalViewController: UIViewController {
 
     @IBOutlet weak var finalLoser: UILabel!
     
+   // var finalLoserName: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        finalLoser.text = 
+        finalLoser.text = DataManager.shared.name
         // Do any additional setup after loading the view.
     }
     

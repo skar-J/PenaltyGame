@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PenaltyGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="PenaltyGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,7 +73,7 @@
         <!--Write Down View Controller-->
         <scene sceneID="kFb-EA-2dR">
             <objects>
-                <viewController id="Hwn-6F-230" customClass="WriteDownViewController" customModule="PenaltyGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WriteDownViewController" id="Hwn-6F-230" customClass="WriteDownViewController" customModule="PenaltyGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ops-gq-LGU">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,7 +155,7 @@
         <!--Count Down View Controller-->
         <scene sceneID="Vmy-Kl-yqf">
             <objects>
-                <viewController id="fCu-eS-RKk" customClass="CountDownViewController" customModule="PenaltyGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CountDownViewController" id="fCu-eS-RKk" customClass="CountDownViewController" customModule="PenaltyGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hg0-nc-awd">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

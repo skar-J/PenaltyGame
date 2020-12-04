@@ -37,6 +37,7 @@ extension ViewController : Getdelegate {
     func get() -> Int {
         return Int(peopleCount.text ?? "지윤" ) ?? 0
         //return Int(peopleCount.text!) ?? 0
+        //"지윤"이라는 값 대신 0 넣는게 더 효율적이지 않는지
     }
 }
 
