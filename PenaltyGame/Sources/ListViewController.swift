@@ -1,5 +1,5 @@
 //
-//  TableViewController.swift
+//  ListViewController.swift
 //  PenaltyGame
 //
 //  Created by 이종영 on 2020/11/23.
@@ -8,10 +8,39 @@
 import UIKit
 
 class ListViewController: UIViewController, UITableViewDataSource {
-    let arr = ["Name1", "Name2", "Name3", "Name4", "Name5"]
+    let arr = ["Name1", "Name2", "Name3", "Name4", "Name5", "Name6", "Name7", "Name8", "Name9", "Name10"]
+    
+    var listViewRowLength: Int? = nil
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    @objc private func moveResultController(_ sender: Any) {
+        guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController else {
+            return
+        }
+
+        if let x = listViewRowLength {
+            let resultIndex = Int(arc4random_uniform(UInt32(x)))
+            controller.penalistName = arr[resultIndex]
+        }
+        
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.navigationController?.isNavigationBarHidden = false
+    
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "결과 보기", style: .plain, target: self, action: #selector(moveResultController(_:)))
+
+        tableView.dataSource = self
+    }
+
+    // MARK: - Table view data source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arr.count
+        return listViewRowLength ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -20,23 +49,9 @@ class ListViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
-    @IBOutlet weak var tableView: UITableView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // 네비게이션바 숨김 해제
-        self.navigationController?.isNavigationBarHidden = false
-
-        tableView.dataSource = self
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        NSLog("\(indexPath.row)번째 데이터가 클릭됨")
     }
-
-    // MARK: - Table view data source
 
 //    override func numberOfSections(in tableView: UITableView) -> Int {
 //        // #warning Incomplete implementation, return the number of sections
