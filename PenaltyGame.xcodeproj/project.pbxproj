@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F544F56256B4AB70033C6E1 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F544F55256B4AB70033C6E1 /* ListViewController.swift */; };
-		1F544F59256B4FD60033C6E1 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F544F58256B4FD60033C6E1 /* ListViewCell.swift */; };
+		1F6710C1257916FF00C95129 /* PenalistListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6710C0257916FF00C95129 /* PenalistListViewController.swift */; };
+		1F6710C42579199700C95129 /* PenalistInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6710C32579199700C95129 /* PenalistInfo.swift */; };
+		1F6710C8257949AC00C95129 /* PenalistListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6710C7257949AC00C95129 /* PenalistListCell.swift */; };
+		1F83E493256DE8C500335399 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F83E492256DE8C500335399 /* ResultViewController.swift */; };
 		1FB61E0F256669EC00847DA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB61E0E256669EC00847DA4 /* AppDelegate.swift */; };
 		1FB61E11256669EC00847DA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB61E10256669EC00847DA4 /* SceneDelegate.swift */; };
-		1FB61E13256669EC00847DA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB61E12256669EC00847DA4 /* ViewController.swift */; };
+		1FB61E13256669EC00847DA4 /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB61E12256669EC00847DA4 /* InputController.swift */; };
 		1FB61E16256669EC00847DA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FB61E14256669EC00847DA4 /* Main.storyboard */; };
 		1FB61E18256669ED00847DA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FB61E17256669ED00847DA4 /* Assets.xcassets */; };
 		1FB61E1B256669ED00847DA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FB61E19256669ED00847DA4 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F544F55256B4AB70033C6E1 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		1F544F58256B4FD60033C6E1 /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
+		1F6710C0257916FF00C95129 /* PenalistListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenalistListViewController.swift; sourceTree = "<group>"; };
+		1F6710C32579199700C95129 /* PenalistInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenalistInfo.swift; sourceTree = "<group>"; };
+		1F6710C7257949AC00C95129 /* PenalistListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenalistListCell.swift; sourceTree = "<group>"; };
+		1F83E492256DE8C500335399 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		1FB61E0B256669EC00847DA4 /* PenaltyGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PenaltyGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB61E0E256669EC00847DA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FB61E10256669EC00847DA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1FB61E12256669EC00847DA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1FB61E12256669EC00847DA4 /* InputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputController.swift; sourceTree = "<group>"; };
 		1FB61E15256669EC00847DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FB61E17256669ED00847DA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FB61E1A256669ED00847DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,9 +58,11 @@
 			children = (
 				1FB61E0E256669EC00847DA4 /* AppDelegate.swift */,
 				1FB61E10256669EC00847DA4 /* SceneDelegate.swift */,
-				1FB61E12256669EC00847DA4 /* ViewController.swift */,
-				1F544F55256B4AB70033C6E1 /* ListViewController.swift */,
-				1F544F58256B4FD60033C6E1 /* ListViewCell.swift */,
+				1FB61E12256669EC00847DA4 /* InputController.swift */,
+				1F83E492256DE8C500335399 /* ResultViewController.swift */,
+				1F6710C0257916FF00C95129 /* PenalistListViewController.swift */,
+				1F6710C32579199700C95129 /* PenalistInfo.swift */,
+				1F6710C7257949AC00C95129 /* PenalistListCell.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -64,19 +70,11 @@
 		1F544F62256BA8240033C6E1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1F544F64256BA8500033C6E1 /* New Group */,
+				1FB61E14256669EC00847DA4 /* Main.storyboard */,
+				1FB61E19256669ED00847DA4 /* LaunchScreen.storyboard */,
 				1FB61E17256669ED00847DA4 /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		1F544F64256BA8500033C6E1 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				1FB61E14256669EC00847DA4 /* Main.storyboard */,
-				1FB61E19256669ED00847DA4 /* LaunchScreen.storyboard */,
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		1FB61E02256669EC00847DA4 = {
@@ -175,11 +173,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F544F59256B4FD60033C6E1 /* ListViewCell.swift in Sources */,
-				1FB61E13256669EC00847DA4 /* ViewController.swift in Sources */,
+				1F6710C42579199700C95129 /* PenalistInfo.swift in Sources */,
+				1F6710C1257916FF00C95129 /* PenalistListViewController.swift in Sources */,
+				1FB61E13256669EC00847DA4 /* InputController.swift in Sources */,
 				1FB61E0F256669EC00847DA4 /* AppDelegate.swift in Sources */,
 				1FB61E11256669EC00847DA4 /* SceneDelegate.swift in Sources */,
-				1F544F56256B4AB70033C6E1 /* ListViewController.swift in Sources */,
+				1F6710C8257949AC00C95129 /* PenalistListCell.swift in Sources */,
+				1F83E493256DE8C500335399 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
