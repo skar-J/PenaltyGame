@@ -3,7 +3,7 @@
 //  PenaltyGame
 //
 //  Created by 반지윤 on 2020/12/01.
-//
+// 00
 
 import UIKit
 
